@@ -1,0 +1,97 @@
+.content .pagination{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.content .pagination .text-left{
+    position: absolute;
+    left: 0;
+}
+
+.content .pagination .text-right{
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    padding: 4px 0 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+.pagination .text-right .m-icon-updown{
+    width: 16px;
+    height: 16px;
+    background-image: url(../../content/icon/up-down-icon.png);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    margin: 4px 8px;
+}
+
+.content .pagination .paging{
+    display: flex;
+    align-items: center;
+}
+/* định dạng button phân trang */
+.btn-paging{
+    width: 24px;
+    height: 24px;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+    padding: 4px;
+    margin: auto 8px;
+}
+.btn-paging:hover{
+    cursor: pointer;
+    background-color: #bbbbbb;
+    border-radius: 4px;
+}
+
+.btn-first-page{
+    background-image: url('../../content/icon/btn-firstpage.svg');
+
+}
+
+.btn-prev-page{
+    background-image: url('../../content/icon/btn-prev-page.svg');
+}
+
+.btn-next-page{
+    background-image: url('../../content/icon/btn-next-page.svg');
+}
+.btn-last-page{
+    background-image: url('../../content/icon/btn-lastpage.svg');
+}
+
+.page-number{
+    display: flex;
+}
+
+.p-number{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #bbbbbb;
+    border-radius: 50%;
+    margin: auto 8px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 24px;
+    padding: 4px;
+}
+
+.p-number:hover{
+    background-color: #bbbbbb;
+    color: #000000;
+    cursor: pointer;
+    border: 1px solid #bbbbbb;
+}
+
+.p-active{
+    background-color: #019160;
+    color: #ffffff;
+    border: 1px solid #019160;
+}

@@ -1,0 +1,67 @@
+
+#item-active {
+    background-color: #019160;
+    color: #fff;
+}
+
+.m-btn{
+    border: none;
+    outline: none;
+}
+
+
+.m-input{
+    border-radius: 4px;
+    height: 40px;
+    font-size: 12px;
+    color: #bbbbbb;
+    border: 1px solid #bbbbbb;
+}
+.m-input:focus{
+    border: 1px solid #019160;
+    outline: none;
+    font-size: 13px;
+    color: #000000;
+}
+
+.m-input:hover{
+    cursor: pointer;
+}
+
+table thead{
+    font-weight: 600;
+}
+
+table th, td{
+    border-bottom: 1px solid #bbbbbb;
+    padding:10px 16px;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+table td:hover{
+    overflow: visible;
+    max-width: none;
+}
+
+table tr:hover td{
+    cursor: pointer;
+    background-color: #e5e5e5;
+}
+
+table thead th{
+    position: -webkit-sticky;
+    /* position: sticky; */
+    top: 0;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-center{
+    text-align: center;
+}

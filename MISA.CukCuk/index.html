@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISA CukCuk</title>
+    <link rel="stylesheet" href="./css/common/main.css">
+    <link rel="stylesheet" href="./css/common/button.css">
+    <link rel="stylesheet" href="./css/common/sidebar.css">
+    <link rel="stylesheet" href="./css/common/header.css">
+    <link rel="stylesheet" href="./css/common/common.css">
+    <link rel="stylesheet" href="./css/common/content.css">
+    <link rel="stylesheet" href="./css/common/pagination.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/common/common.js"></script>
+     
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="logo-site">
+                <div class="logo-toggle mt-12" title="Thu gọn sidebar"></div>
+                <div class="logo-icon mt-12" title="Trang chủ"></div>
+            </div>
+            <div class="sidebar-content">
+                <div class="item " id="item-active">
+                    <div class="item-icon icon-overview"></div>
+                    <a href="#" class="item-text a-active">Tổng quan</a>
+                </div>
+                <div class="item">
+                    <div class="item-icon icon-report"></div>
+                    <a href="#" class="item-text">Báo cáo</a>
+                </div>
+                <div class="item">
+                    <div class="item-icon icon-purchase"></div>
+                    <a href="#" class="item-text">Mua hàng</a>
+                </div>
+                <div class="item">
+                    <div class="item-icon icon-liststaff"></div>
+                    <a href="#" class="item-text">Danh sách khách hàng</a>
+                </div>
+                <div class="item">
+                    <div class="item-icon icon-setting"></div>
+                    <a href="#" class="item-text">Thiết lập hệ thống</a>
+                </div>
+            </div>
+        </div>
+        <div class="contain">
+            <div class="header">
+                <div class="header-left">
+                    <select name="list-restaurant" id="header-dropdown">
+                        <option value="val1">Nhà hàng biển đông</option>
+                        <option value="val2">Nhà hàng Hải sản</option>
+                        <option value="val3">Nhà hàng FengHuang</option>
+                        <option value="val4">Nhà hàng Phương Nam</option>
+                        <option value="val5">Nhà hàng Ba miền</option>
+                    </select>
+                </div>
+                <div class="header-right">
+                    <div class="account-info">
+                        <div class="account-avatar"></div>
+                        <div class="account-name">Nguyễn Văn Mạnh</div>
+                    </div>
+                    <div class="icon-option"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="header-content">
+                    <div class="header-title">Danh sách khách hàng</div>
+                    <div class="header-button">
+                        <button class="btn-add m-btn">
+                            <div class="btn-add-icon"></div>
+                            <div class="btn-text">Thêm khách hàng</div>
+                        </button>
+                        <button class="btn-option m-btn">
+                            <div class="btn-option-icon "></div>
+                        </button>
+                    </div>
+                </div>
+                <div class="tool-bar">
+                    <div class="tool-bar-left">
+                        <input type="text" class="icon-search input-search icon-x m-input"
+                            placeholder="Tìm kiếm theo mã, tên khách hàng" />
+
+                        <select name="list1" id="list1" class="m-input" aria-placeholder="Chọn tỉnh thành">
+                            <option value="v1">Hà Nội</option>
+                            <option value="v2">Tp.Hồ Chí Minh</option>
+                            <option value="v3">Đã Nẵng</option>
+                        </select>
+
+                        <select name="list1" id="list2" class="m-input" aria-placeholder="Chọn tháng">
+                            <option value="t1">Tháng 1</option>
+                            <option value="t2">Tháng 2</option>
+                            <option value="t3">Tháng 3</option>
+                            <option value="t4">....</option>
+                        </select>
+
+                    </div>
+                    <div class="tool-bar-right">
+                        <button class="btn-download m-btn"></button>
+                        <button class="btn-refresh m-btn"></button>
+                    </div>
+                </div>
+                <div class="grid">
+                    <table id = "tbl-customers" class="fixed_headers" cellspacing="0" cellpadding="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Mã khách hàng</th>
+                                <th>Họ và tên</th>
+                                <th>Giới tính</th>
+                                <th>Ngày sinh</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Địa chỉ</td>
+                                <th>Số tiền nợ</th>
+                                <th>Mã thẻ thành viên</th>
+                            </tr>
+                        </thead> 
+                        <tbody></tbody>
+                        <!-- <tbody>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                            <tr>
+                                <td>KH0001</td>
+                                <td>Nguyễn Văn Mạnh</td>
+                                <td>Nam</td>
+                                <td>02/03/1989</td>
+                                <td>0983662576</td>
+                                <td>nvmanh@gmail.com</td>
+                                <td>Xóm 4, Đội 5, Tân An, Yên Dũng, Bắc Giang, Việt Nam</td>
+                                <td class="text-align-right">1000000</td>
+                                <td>TV00375</td>
+                            </tr>
+                        </tbody> -->
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <div class="text-left">Hiển thị <b>01-20/123</b> Khách hàng</div>
+                    <div class="paging">
+                        <div class="btn-first-page btn-paging"></div>
+                        <div class="btn-prev-page btn-paging"></div>
+                        <div class="page-number">
+                            <div class="p-number p-active">1</div>
+                            <div class="p-number">2</div>
+                            <div class="p-number">3</div>
+                            <div class="p-number">4</div>
+                        </div>
+                        <div class="btn-next-page btn-paging"></div>
+                        <div class="btn-last-page btn-paging"></div>
+                    </div>
+                    <div class="text-right"><b>20 &nbsp</b> Khách hàng/trang <div class="m-icon-updown"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

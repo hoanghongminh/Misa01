@@ -1,0 +1,98 @@
+/* PHẦN LOGO */
+.sidebar .logo-site  {
+    width: 100%;
+    height: 48px;
+    align-items: center;
+    display: flex;
+    line-height: 48px;
+}
+
+.logo-site .logo-toggle{
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    background-image: url("../../content/img/toggle.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo-site .logo-icon{
+    width: calc(100% - 50px); 
+    height: 28px;
+    background-image: url("../../content/img/cukcuk-logo.png");
+    margin: 12px 0 12px 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logo-site .logo-toggle, .logo-icon{
+    cursor: pointer;
+}
+
+
+/* PHẦN SIDEBAR CONTENT  */
+.sidebar .sidebar-content{
+    width: 100%;
+    height: calc(100% - 60px);
+    font-size: 13px;
+}
+
+.sidebar .sidebar-content .item{
+    padding-left: 16px;
+    display: flex;
+    height: 44px;
+    line-height: 44px;
+}
+
+.sidebar .sidebar-content .item:hover{
+    cursor: pointer;
+    background-color: #e5e5e5;
+    font-weight: 600;
+}
+
+.sidebar-content .item a{
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar .sidebar-content #item-active a{
+    color: #ffffff;
+}
+
+/* Icon in sidebar */
+
+.sidebar-content .item .item-icon{
+    width: 20px;
+    height: 20px;
+    margin: auto 12px auto 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item .icon-overview {
+    background-image: url('../../content/icon/dashboard.png');
+}
+
+.item .icon-report {
+    background-image: url('../../content/icon/report.png');
+}
+
+.item .icon-purchase {
+    background-image: url('../../content/icon/dashboard.png');
+}
+
+.item .icon-liststaff {
+    background-image: url('../../content/icon/dic-employee.png');
+}
+
+.item .icon-setting {
+    background-image: url('../../content/icon/setting.png');
+}
+
+.item .item-text{
+    font-size: 13px;
+}
+
+
+/* .mt-12 {
+    margin-top: 12px;
+} */
